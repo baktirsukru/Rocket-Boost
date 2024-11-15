@@ -42,6 +42,7 @@ public class Movement : MonoBehaviour
     {
         float rotationInput = rotation.ReadValue<float>();
         //Debug.Log("rotation value: " + rotationInput);
+        //new comment
 
         if(rotationInput < 0)
         {
