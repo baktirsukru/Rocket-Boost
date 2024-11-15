@@ -3,11 +3,13 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
-    Rigidbody rb;
     [SerializeField] InputAction thrust;
     [SerializeField] InputAction rotation;
     [SerializeField] float thrustStrength = 100f;
     [SerializeField] float rotationStrength = 100f;
+
+    Rigidbody rb;
+    AudioSource audioSource;
 
     
 
@@ -15,6 +17,7 @@ public class Movement : MonoBehaviour
     private void Start() 
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable() 
@@ -28,6 +31,8 @@ public class Movement : MonoBehaviour
     {
         ProcessThrust();
         ProcessRotation();
+
+        
     }
 
     private void ProcessThrust()
@@ -35,7 +40,13 @@ public class Movement : MonoBehaviour
         if (thrust.IsPressed())
         {
             rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
+            if(!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
+        else
+        audioSource.Stop();
     }
 
     private void ProcessRotation()
@@ -52,11 +63,16 @@ public class Movement : MonoBehaviour
         {
             ApplyRotation(-rotationStrength);
         }
+        
     }
 
     private void ApplyRotation(float rotationThisFrame)
     {
+        rb.freezeRotation = true;
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.fixedDeltaTime);
+        rb.freezeRotation = false;
     }
-    //camera commit
+    
+
+   
 }
