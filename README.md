@@ -1,3 +1,3 @@
 # Rocket-Boost
  
-# Fly the rocket through the obstacles in 3 different levels
+ Fly the rocket through the obstacles in 3 different levels
