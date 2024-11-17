@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1178688148659d940b1eb01fedf7654a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -233,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.216445, y: 4.2799997, z: -13}
+  m_LocalPosition: {x: -6.217765, y: 4.1280003, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -506,7 +506,7 @@ Transform:
   m_GameObject: {fileID: 455088077}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.216445, y: 4.2799997, z: -13}
+  m_LocalPosition: {x: -6.217765, y: 4.1280003, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -895,6 +895,67 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 290127280}
   m_SourcePrefab: {fileID: 100100000, guid: 52d989fc3ffe226438abaa75b261b465, type: 3}
+--- !u!1001 &2129444721
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1300738493519268957, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_Name
+      value: Dropship_01_Tank_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300738493519268957, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_TagString
+      value: Respawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.1945612
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2571621
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
 --- !u!1001 &1828618357312513161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -909,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7517515668376211332, guid: c2691f3d22d87e94295ab6c88d02e86f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.28
+      value: 1.128
       objectReference: {fileID: 0}
     - target: {fileID: 7517515668376211332, guid: c2691f3d22d87e94295ab6c88d02e86f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -947,72 +1008,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rocket
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2528056196165360550, guid: c2691f3d22d87e94295ab6c88d02e86f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2691f3d22d87e94295ab6c88d02e86f, type: 3}
---- !u!1001 &1950670223344922349
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1300738493519268957, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_Name
-      value: Dropship_01_Tank_Red
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.1274996
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.4273
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.013213
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071079
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.70710576
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1821414026682619623, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8470901d34c1d8e46b15e3b1f551e3fa, type: 3}
 --- !u!1001 &7606495315312088503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1084,4 +1085,4 @@ SceneRoots:
   - {fileID: 1357197695}
   - {fileID: 2000740504}
   - {fileID: 1828618357312513161}
-  - {fileID: 1950670223344922349}
+  - {fileID: 2129444721}
