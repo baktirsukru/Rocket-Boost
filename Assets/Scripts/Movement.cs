@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +8,10 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction rotation;
     [SerializeField] float thrustStrength = 100f;
     [SerializeField] float rotationStrength = 100f;
-    [SerializeField] AudioClip mainEngine;
+    [SerializeField] AudioClip mainEngineSFX;
+    [SerializeField] ParticleSystem mainEngineParticle;
+    [SerializeField] ParticleSystem rightThrustParticle;
+    [SerializeField] ParticleSystem leftThrustParticle;
 
     Rigidbody rb;
     AudioSource audioSource;
@@ -27,27 +31,41 @@ public class Movement : MonoBehaviour
         rotation.Enable();
     }
 
-
     private void FixedUpdate()
     {
         ProcessThrust();
-        ProcessRotation();
-
-        
+        ProcessRotation();        
     }
 
     private void ProcessThrust()
     {
         if (thrust.IsPressed())
         {
-            rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
-            if(!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngine);
-            }
+            StartThrusting();
         }
         else
+        {
+            StopThrusting();
+        }
+    }
+
+    private void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * thrustStrength * Time.fixedDeltaTime);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngineSFX);
+        }
+        if (!mainEngineParticle.isPlaying)
+        {
+            mainEngineParticle.Play();
+        }
+    }
+
+    private void StopThrusting()
+    {
         audioSource.Stop();
+        mainEngineParticle.Stop();
     }
 
     private void ProcessRotation()
@@ -58,13 +76,40 @@ public class Movement : MonoBehaviour
 
         if(rotationInput < 0)
         {
-            ApplyRotation(rotationStrength);
+            RotateRight();
         }
         else if(rotationInput > 0)
         {
-            ApplyRotation(-rotationStrength);
+            RotateLeft();
+        }
+        else
+        {
+            rightThrustParticle.Stop();
+            leftThrustParticle.Stop();
         }
         
+    }
+
+    private void RotateLeft()
+    {
+        ApplyRotation(-rotationStrength);
+
+        if (!leftThrustParticle.isPlaying)
+        {
+            rightThrustParticle.Stop();
+            leftThrustParticle.Play();
+        }
+    }
+
+    private void RotateRight()
+    {
+        ApplyRotation(rotationStrength);
+
+        if (!rightThrustParticle.isPlaying)
+        {
+            leftThrustParticle.Stop();
+            rightThrustParticle.Play();
+        }
     }
 
     private void ApplyRotation(float rotationThisFrame)
@@ -72,8 +117,5 @@ public class Movement : MonoBehaviour
         rb.freezeRotation = true;
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.fixedDeltaTime);
         rb.freezeRotation = false;
-    }
-    
-
-   
+    }   
 }
