@@ -22,7 +22,7 @@ public class CollisionHandler : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void Update() 
+    /* private void Update() 
     {
         RespondToDebugKeys();
     }
@@ -38,7 +38,7 @@ public class CollisionHandler : MonoBehaviour
             isCollidable = !isCollidable;
             //Debug.Log("c key is pressed");
         }
-    }
+    } */
 
     private void OnCollisionEnter(Collision other) 
     {
