@@ -12,9 +12,11 @@ public class Movement : MonoBehaviour
     [SerializeField] ParticleSystem mainEngineParticle;
     [SerializeField] ParticleSystem rightThrustParticle;
     [SerializeField] ParticleSystem leftThrustParticle;
+    
 
     Rigidbody rb;
     AudioSource audioSource;
+    
 
     
 
@@ -23,6 +25,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+        
     }
 
     private void OnEnable() 
