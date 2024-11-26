@@ -84,11 +84,20 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            rightThrustParticle.Stop();
-            leftThrustParticle.Stop();
+            StopRotating();
         }
-        
     }
+
+    private void RotateRight()
+        {
+            ApplyRotation(rotationStrength);
+
+            if (!rightThrustParticle.isPlaying)
+            {
+                leftThrustParticle.Stop();
+                rightThrustParticle.Play();
+            }
+        }
 
     private void RotateLeft()
     {
@@ -101,15 +110,10 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void RotateRight()
+    private void StopRotating()
     {
-        ApplyRotation(rotationStrength);
-
-        if (!rightThrustParticle.isPlaying)
-        {
-            leftThrustParticle.Stop();
-            rightThrustParticle.Play();
-        }
+        rightThrustParticle.Stop();
+        leftThrustParticle.Stop();
     }
 
     private void ApplyRotation(float rotationThisFrame)
